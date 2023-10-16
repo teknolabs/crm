@@ -1,8 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using TeknoLabs.Crm.Persistance.Context;
 using TeknoLabs.Crm.Presentation;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("TeknoLabsCrmDbContext")));
 
 builder.Services.AddControllers().AddApplicationPart(typeof(AssemblyReferance).Assembly);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
