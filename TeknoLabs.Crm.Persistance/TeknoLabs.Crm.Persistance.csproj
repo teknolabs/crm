@@ -14,10 +14,24 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.12" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TeknoLabs.Crm.Domain\TeknoLabs.Crm.Domain.csproj" />
+    <ProjectReference Include="..\TeknoLabs.Crm.Application\TeknoLabs.Crm.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Services\App\" />
+    <None Remove="Services\Client\" />
+    <None Remove="Mapping\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Services\App\" />
+    <Folder Include="Services\Client\" />
+    <Folder Include="Mapping\" />
+  </ItemGroup>
 </Project>

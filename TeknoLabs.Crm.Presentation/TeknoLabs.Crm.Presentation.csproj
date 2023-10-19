@@ -8,6 +8,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TeknoLabs.Crm.Application\TeknoLabs.Crm.Application.csproj" />
+  </ItemGroup>
 </Project>
