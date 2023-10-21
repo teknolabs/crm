@@ -23,7 +23,6 @@ namespace TeknoLabs.Crm.Persistance.Context
             {
                 if (entry.State == EntityState.Added)
                 {
-                    entry.Property(p => p.Id).CurrentValue = Guid.NewGuid().ToString();
                     entry.Property(p => p.CreatedDate).CurrentValue = DateTime.Now;
                 }
 

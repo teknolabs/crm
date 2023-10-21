@@ -1,13 +1,17 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+using TeknoLabs.Crm.Application.Services.App;
 using TeknoLabs.Crm.Domain.AppEntities.Identity;
 using TeknoLabs.Crm.Persistance.Context;
+using TeknoLabs.Crm.Persistance.Services.App;
 using TeknoLabs.Crm.Presentation;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddMediatR(typeof(TeknoLabs.Crm.Application.AssemblyReferance).Assembly);
+builder.Services.AddScoped<IClientService, ClientService>();
+// Add services to the container. 
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(TeknoLabs.Crm.Application.AssemblyReferance).Assembly));
 builder.Services.AddAutoMapper(typeof(TeknoLabs.Crm.Persistance.AssemblyReferance).Assembly);
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("TeknoLabsCrmDbContext")));

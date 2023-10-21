@@ -7,8 +7,8 @@ using TeknoLabs.Crm.Persistance.Context;
 
 namespace TeknoLabs.Crm.Persistance.Services.App
 {
-	public sealed class ClientService : IClientService
-	{
+    public sealed class ClientService : IClientService
+    {
         private readonly AppDbContext _appContext;
         private readonly IMapper _mapper;
 
@@ -21,8 +21,14 @@ namespace TeknoLabs.Crm.Persistance.Services.App
         public async Task CreateClient(CreateClientRequest request)
         {
             Client client = _mapper.Map<Client>(request);
+            client.Id = Guid.NewGuid().ToString();
             await _appContext.Set<Client>().AddAsync(client);
             await _appContext.SaveChangesAsync();
+        }
+
+        public Task<Client> GetClientByName(string name)
+        {
+            throw new NotImplementedException();
         }
     }
 }
