@@ -1,6 +1,6 @@
 ﻿using System;
 using AutoMapper;
-using TeknoLabs.Crm.Application.Features.App.Client.Commands.CreateClient;
+using TeknoLabs.Crm.Application.Features.App.ClientFeature.Commands.CreateClient;
 using TeknoLabs.Crm.Domain.AppEntities;
 
 namespace TeknoLabs.Crm.Persistance.Mapping

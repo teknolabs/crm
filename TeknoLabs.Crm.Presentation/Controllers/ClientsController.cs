@@ -1,7 +1,7 @@
 ﻿using System;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using TeknoLabs.Crm.Application.Features.App.Client.Commands.CreateClient;
+using TeknoLabs.Crm.Application.Features.App.ClientFeature.Commands.CreateClient;
 using TeknoLabs.Crm.Presentation.Abstraction;
 
 namespace TeknoLabs.Crm.Presentation.Controllers

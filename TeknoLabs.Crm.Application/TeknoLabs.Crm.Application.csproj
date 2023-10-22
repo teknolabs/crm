@@ -14,21 +14,17 @@
     <None Remove="Features\App\" />
     <None Remove="Features\Client\" />
     <None Remove="Features\App\Client\" />
-    <None Remove="Features\App\Client\Commands\" />
-    <None Remove="Features\App\Client\Queries\" />
-    <None Remove="Features\App\Client\Commands\CreateClient\" />
+    <None Remove="Features\App\ClientFeature\Commands\" />
+    <None Remove="Features\App\ClientFeature\Queries\" />
+    <None Remove="Features\App\ClientFeature\Commands\CreateClient\" />
     <None Remove="Services\" />
     <None Remove="Services\App\" />
     <None Remove="Services\Client\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\" />
-    <Folder Include="Features\App\" />
     <Folder Include="Features\Client\" />
-    <Folder Include="Features\App\Client\" />
-    <Folder Include="Features\App\Client\Commands\" />
-    <Folder Include="Features\App\Client\Queries\" />
-    <Folder Include="Features\App\Client\Commands\CreateClient\" />
+    <Folder Include="Features\App\ClientFeature\" />
+    <Folder Include="Features\App\ClientFeature\Queries\" />
     <Folder Include="Services\" />
     <Folder Include="Services\App\" />
     <Folder Include="Services\Client\" />

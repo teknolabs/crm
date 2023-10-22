@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace TeknoLabs.Crm.Application.Features.App.Client.Commands.CreateClient
+namespace TeknoLabs.Crm.Application.Features.App.ClientFeature.Commands.CreateClient
 {
     public sealed class CreateClientRequest : IRequest<CreateClientResponse>
 	{

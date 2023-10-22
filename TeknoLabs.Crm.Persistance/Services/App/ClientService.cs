@@ -1,6 +1,7 @@
 ﻿using System;
 using AutoMapper;
-using TeknoLabs.Crm.Application.Features.App.Client.Commands.CreateClient;
+using Microsoft.EntityFrameworkCore;
+using TeknoLabs.Crm.Application.Features.App.ClientFeature.Commands.CreateClient;
 using TeknoLabs.Crm.Application.Services.App;
 using TeknoLabs.Crm.Domain.AppEntities;
 using TeknoLabs.Crm.Persistance.Context;
@@ -9,6 +10,12 @@ namespace TeknoLabs.Crm.Persistance.Services.App
 {
     public sealed class ClientService : IClientService
     {
+        private static readonly Func<AppDbContext, string, Task<Client?>>
+            GetClientByNameCompiled =
+            EF.CompileAsyncQuery((AppDbContext context, string name) =>
+            context.Set<Client>().FirstOrDefault(x => x.Name == name)
+            );
+
         private readonly AppDbContext _appContext;
         private readonly IMapper _mapper;
 
@@ -26,9 +33,9 @@ namespace TeknoLabs.Crm.Persistance.Services.App
             await _appContext.SaveChangesAsync();
         }
 
-        public Task<Client> GetClientByName(string name)
+        public async Task<Client?> GetClientByName(string name)
         {
-            throw new NotImplementedException();
+            return await GetClientByNameCompiled(_appContext, name);
         }
     }
 }
