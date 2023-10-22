@@ -7,7 +7,7 @@ namespace TeknoLabs.Crm.Persistance.Context
     public sealed class ClientDbContext : DbContext
     {
         public string ConnectionString { get; set; }
-        public ClientDbContext(string companyId, Client client = null)
+        public ClientDbContext(Client client = null)
         {
             if (client != null)
             {
@@ -46,7 +46,7 @@ namespace TeknoLabs.Crm.Persistance.Context
         {
             public ClientDbContext CreateDbContext(string[] args)
             {
-                return new ClientDbContext("");
+                return new ClientDbContext();
             }
         }
     }

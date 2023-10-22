@@ -37,6 +37,16 @@ namespace TeknoLabs.Crm.Persistance.Services.App
         {
             return await GetClientByNameCompiled(_appContext, name);
         }
+
+        public async Task MigrateClientDatabases()
+        {
+            var clients = await _appContext.Set<Client>().ToListAsync();
+            foreach (var client in clients)
+            {
+                var db = new ClientDbContext(client);
+                db.Database.Migrate();
+            }
+        }
     }
 }
 

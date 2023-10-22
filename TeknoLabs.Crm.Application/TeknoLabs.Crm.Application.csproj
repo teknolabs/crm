@@ -23,7 +23,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\Client\" />
-    <Folder Include="Features\App\ClientFeature\" />
     <Folder Include="Features\App\ClientFeature\Queries\" />
     <Folder Include="Services\" />
     <Folder Include="Services\App\" />
