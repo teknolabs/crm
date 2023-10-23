@@ -10,7 +10,7 @@ namespace TeknoLabs.Crm.Domain.Repositories
 		IQueryable<T> GetAll();
 		IQueryable<T> GetWhere(Expression<Func<T, bool>> expression);
 		Task<T> GetById(string id);
-		Task<T> GetByExpression(Expression<Func<T, bool>> expression);
+		Task<T> GetFirstByExpression(Expression<Func<T, bool>> expression);
 		Task<T> GetFirst();
 	}
 }
