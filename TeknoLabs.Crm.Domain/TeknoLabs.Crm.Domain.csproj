@@ -11,4 +11,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.12" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
 </Project>

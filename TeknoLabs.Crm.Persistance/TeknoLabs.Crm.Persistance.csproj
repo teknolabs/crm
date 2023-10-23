@@ -27,11 +27,13 @@
     <None Remove="Services\App\" />
     <None Remove="Services\Client\" />
     <None Remove="Mapping\" />
+    <None Remove="Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Services\App\" />
     <Folder Include="Services\Client\" />
     <Folder Include="Mapping\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 </Project>
