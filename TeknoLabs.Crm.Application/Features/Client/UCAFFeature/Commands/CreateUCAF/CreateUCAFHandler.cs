@@ -1,11 +1,20 @@
 ﻿using MediatR;
+using TeknoLabs.Crm.Application.Services.ClientService;
 
-namespace TeknoLabs.Crm.Application.Features.Client.UCAFFeature.Commands.CreateUCAF
+namespace TeknoLabs.Crm.Application.Features.ClientFeature.UCAFFeature.Commands.CreateUCAF
 {
     public sealed class CreateUCAFHandler : IRequestHandler<CreateUCAFRequest, CreateUCAFResponse>
     {
+        private readonly IUCAFService _ucafService;
+
+        public CreateUCAFHandler(IUCAFService ucafService)
+        {
+            _ucafService = ucafService;
+        }
+
         public async Task<CreateUCAFResponse> Handle(CreateUCAFRequest request, CancellationToken cancellationToken)
         {
+            await _ucafService.CreateUcafAsync(request);
             return new();
         }
     }

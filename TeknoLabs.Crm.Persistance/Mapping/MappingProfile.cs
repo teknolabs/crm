@@ -1,7 +1,7 @@
 ﻿using System;
 using AutoMapper;
 using TeknoLabs.Crm.Application.Features.App.ClientFeature.Commands.CreateClient;
-using TeknoLabs.Crm.Application.Features.Client.UCAFFeature.Commands.CreateUCAF;
+using TeknoLabs.Crm.Application.Features.ClientFeature.UCAFFeature.Commands.CreateUCAF;
 using TeknoLabs.Crm.Domain.AppEntities;
 using TeknoLabs.Crm.Domain.ClientEntities;
 

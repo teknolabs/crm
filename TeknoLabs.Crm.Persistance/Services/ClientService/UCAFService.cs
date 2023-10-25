@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using TeknoLabs.Crm.Application.Features.Client.UCAFFeature.Commands.CreateUCAF;
-using TeknoLabs.Crm.Application.Services.Client;
+using TeknoLabs.Crm.Application.Features.ClientFeature.UCAFFeature.Commands.CreateUCAF;
+using TeknoLabs.Crm.Application.Services.ClientService;
 using TeknoLabs.Crm.Domain;
 using TeknoLabs.Crm.Domain.ClientEntities;
 using TeknoLabs.Crm.Domain.Repositories.UCAFRepositories;
 using TeknoLabs.Crm.Persistance.Context;
 
-namespace TeknoLabs.Crm.Persistance.Services.Client
+namespace TeknoLabs.Crm.Persistance.Services.ClientService
 {
     public sealed class UCAFService : IUCAFService
     {

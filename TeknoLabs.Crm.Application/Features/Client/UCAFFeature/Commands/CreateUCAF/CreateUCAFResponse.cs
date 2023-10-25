@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TeknoLabs.Crm.Application.Features.Client.UCAFFeature.Commands.CreateUCAF
+﻿namespace TeknoLabs.Crm.Application.Features.ClientFeature.UCAFFeature.Commands.CreateUCAF
 {
     public sealed class CreateUCAFResponse 
     {
