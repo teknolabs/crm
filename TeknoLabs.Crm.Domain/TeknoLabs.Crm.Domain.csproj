@@ -14,7 +14,4 @@
   <ItemGroup>
     <None Remove="Repositories\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
 </Project>

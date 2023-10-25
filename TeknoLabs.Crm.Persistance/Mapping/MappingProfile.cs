@@ -1,7 +1,9 @@
 ﻿using System;
 using AutoMapper;
 using TeknoLabs.Crm.Application.Features.App.ClientFeature.Commands.CreateClient;
+using TeknoLabs.Crm.Application.Features.Client.UCAFFeature.Commands.CreateUCAF;
 using TeknoLabs.Crm.Domain.AppEntities;
+using TeknoLabs.Crm.Domain.ClientEntities;
 
 namespace TeknoLabs.Crm.Persistance.Mapping
 {
@@ -10,6 +12,7 @@ namespace TeknoLabs.Crm.Persistance.Mapping
 		public MappingProfile()
 		{
 			CreateMap<CreateClientRequest, Client>().ReverseMap();
+			CreateMap<CreateUCAFRequest, UniformChartOfAccount>().ReverseMap();
 		}
 	}
 }

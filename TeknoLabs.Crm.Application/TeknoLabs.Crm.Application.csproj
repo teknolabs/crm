@@ -22,11 +22,9 @@
     <None Remove="Services\Client\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\Client\" />
     <Folder Include="Features\App\ClientFeature\Queries\" />
-    <Folder Include="Services\" />
+    <Folder Include="Features\Client\UCAFFeature\Queries\" />
     <Folder Include="Services\App\" />
-    <Folder Include="Services\Client\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeknoLabs.Crm.Domain\TeknoLabs.Crm.Domain.csproj" />

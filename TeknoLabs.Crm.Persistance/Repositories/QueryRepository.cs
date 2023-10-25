@@ -30,7 +30,7 @@ namespace TeknoLabs.Crm.Persistance.Repositories
 
         public DbSet<T> Entity { get; set; }
 
-        public void CreateDbContextInstance(DbContext context)
+        public void SetDbContextInstance(DbContext context)
         {
             _context = (ClientDbContext)context;
             Entity = _context.Set<T>();
