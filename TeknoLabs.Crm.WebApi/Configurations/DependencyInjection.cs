@@ -4,7 +4,9 @@ namespace TeknoLabs.Crm.WebApi.Configurations;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection InstallServices(this IServiceCollection services, IConfiguration configuration, params Assembly[] assemblies)
+    public static IServiceCollection InstallServices(this IServiceCollection services,
+        IConfiguration configuration,
+        params Assembly[] assemblies)
     {
         IEnumerable<IServiceInstaller> serviceInstallers = assemblies
             .SelectMany(a => a.DefinedTypes)
@@ -20,7 +22,7 @@ public static class DependencyInjection
         return services;
 
         static bool IsAssignableToType<T>(TypeInfo typeInfo) =>
-        typeInfo.IsAssignableFrom(typeof(T)) &&
+        typeof(T).IsAssignableFrom(typeInfo) &&
         !typeInfo.IsInterface &&
         !typeInfo.IsAbstract;
 

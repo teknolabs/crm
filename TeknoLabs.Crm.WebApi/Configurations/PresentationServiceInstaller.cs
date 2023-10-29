@@ -9,5 +9,7 @@ public class PresentationServiceInstaller : IServiceInstaller
         services.AddControllers().AddApplicationPart(typeof(AssemblyReferance).Assembly);
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
+        services.AddAuthentication();
+        services.AddAuthorization();
     }
 }

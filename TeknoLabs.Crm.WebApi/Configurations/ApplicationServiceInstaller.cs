@@ -1,4 +1,5 @@
-﻿using TeknoLabs.Crm.Application;
+﻿using MediatR;
+using TeknoLabs.Crm.Application;
 
 namespace TeknoLabs.Crm.WebApi.Configurations;
 
