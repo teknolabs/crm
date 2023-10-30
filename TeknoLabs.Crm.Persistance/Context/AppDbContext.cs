@@ -39,7 +39,7 @@ namespace TeknoLabs.Crm.Persistance.Context
             public AppDbContext CreateDbContext(string[] args)
             {
                 var builder = new DbContextOptionsBuilder();
-                var connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TeknoLabsCrm;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+                var connectionString = "Data Source=localhost;Initial Catalog=TeknoLabsCrm;User Id=sa; Password=Pass123456;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
                 builder.UseSqlServer(connectionString);
                 return new AppDbContext(builder.Options);
             }

@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Identity;
+using TeknoLabs.Crm.Domain.AppEntities.Identity;
 using TeknoLabs.Crm.Presentation;
 using TeknoLabs.Crm.WebApi.Configurations;
 
@@ -23,5 +25,22 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+using (var scoped = app.Services.CreateScope())
+{
+    var userManager = scoped.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
+    if (!userManager.Users.Any())
+    {
+        var result = await userManager.CreateAsync(new AppUser
+        {
+            UserName = "fatihcelen",
+            Email = "fatihcelen@gmail.com",
+            Id = Guid.NewGuid().ToString(),
+            NameLastName = "Fatih ÇELEN"
+        }, "Pass!123456");
+
+        if (!result.Succeeded) throw new Exception(result.Errors.ToString());
+    }
+}
 
 app.Run();
