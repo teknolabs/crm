@@ -23,6 +23,8 @@
     <None Remove="Abstractions\" />
     <None Remove="Features\App\AppUserFeatures\" />
     <None Remove="Features\App\AppUserFeatures\Login\" />
+    <None Remove="Features\App\RoleFeatures\" />
+    <None Remove="Features\App\RoleFeatures\CreateRole\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\App\ClientFeature\Queries\" />
@@ -31,6 +33,8 @@
     <Folder Include="Abstractions\" />
     <Folder Include="Features\App\AppUserFeatures\" />
     <Folder Include="Features\App\AppUserFeatures\Login\" />
+    <Folder Include="Features\App\RoleFeatures\" />
+    <Folder Include="Features\App\RoleFeatures\CreateRole\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeknoLabs.Crm.Domain\TeknoLabs.Crm.Domain.csproj" />
