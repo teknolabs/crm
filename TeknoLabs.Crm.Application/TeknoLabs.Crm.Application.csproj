@@ -33,7 +33,6 @@
     <Folder Include="Abstractions\" />
     <Folder Include="Features\App\AppUserFeatures\" />
     <Folder Include="Features\App\AppUserFeatures\Login\" />
-    <Folder Include="Features\App\RoleFeatures\" />
     <Folder Include="Features\App\RoleFeatures\CreateRole\" />
   </ItemGroup>
   <ItemGroup>
