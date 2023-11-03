@@ -18,6 +18,7 @@ public class PersistanceDIServiceInstaller : IServiceInstaller
 
         services.AddScoped<IClientService, ClientService>();
         services.AddScoped<IUCAFService, UCAFService>();
+        services.AddScoped<IRoleService, RoleService>();
 
         services.AddScoped<IUCAFCommandRepository, UCAFCommandRepository>();
         services.AddScoped<IUCAFQueryRepository, UCAFQueryRepository>();

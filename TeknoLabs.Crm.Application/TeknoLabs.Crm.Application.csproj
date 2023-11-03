@@ -29,7 +29,6 @@
   <ItemGroup>
     <Folder Include="Features\App\ClientFeature\Queries\" />
     <Folder Include="Features\Client\UCAFFeature\Queries\" />
-    <Folder Include="Services\App\" />
     <Folder Include="Abstractions\" />
     <Folder Include="Features\App\AppUserFeatures\" />
     <Folder Include="Features\App\AppUserFeatures\Login\" />

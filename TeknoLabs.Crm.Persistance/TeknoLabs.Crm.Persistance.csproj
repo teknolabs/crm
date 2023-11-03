@@ -30,7 +30,6 @@
     <None Remove="Repositories\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\App\" />
     <Folder Include="Mapping\" />
   </ItemGroup>
 </Project>
