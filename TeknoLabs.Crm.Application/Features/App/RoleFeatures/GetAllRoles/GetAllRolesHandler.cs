@@ -17,6 +17,6 @@ public sealed class GetAllRolesHandler : IQueryHandler<GetAllRolesRequest, GetAl
     public async Task<GetAllRolesResponse> Handle(GetAllRolesRequest request, CancellationToken cancellationToken)
     {
         IList<AppRole> roles = await _roleService.GetAllRolesAsync();
-        return new GetAllRolesResponse() { Roles = roles };
+        return new(roles);
     }
 }

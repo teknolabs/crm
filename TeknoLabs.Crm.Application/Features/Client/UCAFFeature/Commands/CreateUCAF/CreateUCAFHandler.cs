@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿using TeknoLabs.Crm.Application.Messaging;
 using TeknoLabs.Crm.Application.Services.ClientService;
 
 namespace TeknoLabs.Crm.Application.Features.ClientFeature.UCAFFeature.Commands.CreateUCAF
