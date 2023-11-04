@@ -1,7 +1,6 @@
-﻿using MediatR;
+﻿using TeknoLabs.Crm.Application.Messaging;
 
 namespace TeknoLabs.Crm.Application.Features.App.RoleFeatures.GetAllRoles;
 
-public sealed class GetAllRolesRequest : IRequest<GetAllRolesResponse>
-{
-}
+public sealed record GetAllRolesRequest() : IQuery<GetAllRolesResponse>;
+

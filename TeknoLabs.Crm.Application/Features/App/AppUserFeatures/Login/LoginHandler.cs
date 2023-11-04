@@ -2,11 +2,12 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TeknoLabs.Crm.Application.Abstractions;
+using TeknoLabs.Crm.Application.Messaging;
 using TeknoLabs.Crm.Domain.AppEntities.Identity;
 
 namespace TeknoLabs.Crm.Application.Features.App.AppUserFeatures.Login;
 
-public class LoginHandler : IRequestHandler<LoginRequest, LoginResponse>
+public class LoginHandler : ICommandHandler<LoginCommand, LoginResponse>
 {
     private readonly IJwtProvider _jwtProvider;
     private readonly UserManager<AppUser> _userManager;
@@ -17,7 +18,7 @@ public class LoginHandler : IRequestHandler<LoginRequest, LoginResponse>
         _userManager = userManager;
     }
 
-    public async Task<LoginResponse> Handle(LoginRequest request, CancellationToken cancellationToken)
+    public async Task<LoginResponse> Handle(LoginCommand request, CancellationToken cancellationToken)
     {
         AppUser user = await _userManager.Users.Where(k =>
         k.Email == request.EmailOrUserName ||
@@ -30,13 +31,11 @@ public class LoginHandler : IRequestHandler<LoginRequest, LoginResponse>
 
         List<string> roles = new();
 
-        LoginResponse response = new()
-        {
-            Email = user.Email,
-            NameLastName = user.NameLastName,
-            UserId = user.Id,
-            Token = await _jwtProvider.CreateTokenAsync(user, roles)
-        };
+        LoginResponse response = new(
+          await _jwtProvider.CreateTokenAsync(user, roles),
+          user.Email,
+          user.Id,
+          user.NameLastName);
 
         return response;
     }

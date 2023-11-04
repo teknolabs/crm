@@ -1,9 +1,5 @@
-﻿using MediatR;
+﻿using TeknoLabs.Crm.Application.Messaging;
 
-namespace TeknoLabs.Crm.Application.Features.App.RoleFeatures.DeleteRole
-{
-    public sealed class DeleteRoleRequest : IRequest<DeleteRoleResponse>
-    {
-        public string Id { get; set; } 
-    }
-}
+namespace TeknoLabs.Crm.Application.Features.App.RoleFeatures.DeleteRole;
+
+public sealed record DeleteRoleRequest (string Id) : ICommand<DeleteRoleResponse>;

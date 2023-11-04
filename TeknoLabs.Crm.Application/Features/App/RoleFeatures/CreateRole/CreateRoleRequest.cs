@@ -1,11 +1,5 @@
-﻿using System;
-using MediatR;
+﻿using TeknoLabs.Crm.Application.Messaging;
 
 namespace TeknoLabs.Crm.Application.Features.App.RoleFeatures.CreateRole;
 
-public sealed class CreateRoleRequest : IRequest<CreateRoleResponse>
-{
-    public string Name { get; set; }
-    public string Code { get; set; }
-}
-
+public sealed record CreateRoleRequest(string Name, string Code) : ICommand<CreateRoleResponse>;

@@ -1,11 +1,10 @@
-﻿using System;
-using MediatR;
+﻿using TeknoLabs.Crm.Application.Messaging;
 using TeknoLabs.Crm.Application.Services.App;
 using TeknoLabs.Crm.Domain.AppEntities;
 
 namespace TeknoLabs.Crm.Application.Features.App.ClientFeature.Commands.CreateClient
 {
-    public sealed class CreateClientHandler : IRequestHandler<CreateClientRequest, CreateClientResponse>
+    public sealed class CreateClientHandler : ICommandHandler<CreateClientRequest, CreateClientResponse>
     {
         private readonly IClientService _clientService;
 

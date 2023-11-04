@@ -3,7 +3,7 @@ using TeknoLabs.Crm.Application.Services.ClientService;
 
 namespace TeknoLabs.Crm.Application.Features.ClientFeature.UCAFFeature.Commands.CreateUCAF
 {
-    public sealed class CreateUCAFHandler : IRequestHandler<CreateUCAFRequest, CreateUCAFResponse>
+    public sealed class CreateUCAFHandler : ICommandHandler<CreateUCAFRequest, CreateUCAFResponse>
     {
         private readonly IUCAFService _ucafService;
 

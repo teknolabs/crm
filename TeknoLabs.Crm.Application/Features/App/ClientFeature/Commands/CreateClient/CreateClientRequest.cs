@@ -1,15 +1,13 @@
-﻿using MediatR;
+﻿using TeknoLabs.Crm.Application.Messaging;
 
-namespace TeknoLabs.Crm.Application.Features.App.ClientFeature.Commands.CreateClient
-{
-    public sealed class CreateClientRequest : IRequest<CreateClientResponse>
-	{
-        public string Name { get; set; }
+namespace TeknoLabs.Crm.Application.Features.App.ClientFeature.Commands.CreateClient;
 
-        public string ServerName { get; set; }
-        public string DatabaseName { get; set; }
-        public string UserId { get; set; }
-        public string Password { get; set; }
-    }
-}
+public sealed record CreateClientRequest(
+    string Name,
+    string ServerName,
+    string DatabaseName,
+    string UserId,
+    string Password
+    )
+    : ICommand<CreateClientResponse>;
 

@@ -1,10 +1,10 @@
-﻿using MediatR;
+﻿using TeknoLabs.Crm.Application.Messaging;
 using TeknoLabs.Crm.Application.Services.App;
 using TeknoLabs.Crm.Domain.AppEntities.Identity;
 
 namespace TeknoLabs.Crm.Application.Features.App.RoleFeatures.UpdateRole;
 
-public sealed class UpdateRoleHandler : IRequestHandler<UpdateRoleRequest, UpdateRoleResponse>
+public sealed class UpdateRoleHandler : ICommandHandler<UpdateRoleRequest, UpdateRoleResponse>
 {
     private readonly IRoleService _roleService;
 

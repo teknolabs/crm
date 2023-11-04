@@ -1,17 +1,9 @@
-﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TeknoLabs.Crm.Application.Messaging;
 
-namespace TeknoLabs.Crm.Application.Features.ClientFeature.UCAFFeature.Commands.CreateUCAF
-{
-    public sealed class CreateUCAFRequest : IRequest<CreateUCAFResponse>
-    {
-        public string Code { get; set; }
-        public string Name { get; set; }
-        public char Type { get; set; }
-        public string ClientId { get; set; }
-    }
-}
+namespace TeknoLabs.Crm.Application.Features.ClientFeature.UCAFFeature.Commands.CreateUCAF;
+
+public sealed record CreateUCAFRequest(
+    string Code,
+    string Name,
+    char Type,
+    string ClientId) : ICommand<CreateUCAFResponse>;

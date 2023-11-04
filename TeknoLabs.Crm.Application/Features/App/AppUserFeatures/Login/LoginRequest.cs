@@ -1,11 +1,7 @@
-﻿using System;
-using MediatR;
+﻿using TeknoLabs.Crm.Application.Messaging;
 
 namespace TeknoLabs.Crm.Application.Features.App.AppUserFeatures.Login;
 
-public sealed class LoginRequest : IRequest<LoginResponse>
-{
-    public string EmailOrUserName { get; set; } 
-    public string Password { get; set; } 
-}
-
+public sealed record LoginCommand(string EmailOrUserName, string Password):ICommand<LoginResponse>;
+    
+ 

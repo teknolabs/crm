@@ -30,8 +30,6 @@
     <Folder Include="Features\App\ClientFeature\Queries\" />
     <Folder Include="Features\Client\UCAFFeature\Queries\" />
     <Folder Include="Abstractions\" />
-    <Folder Include="Features\App\AppUserFeatures\" />
-    <Folder Include="Features\App\AppUserFeatures\Login\" />
     <Folder Include="Features\App\RoleFeatures\CreateRole\" />
   </ItemGroup>
   <ItemGroup>

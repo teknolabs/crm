@@ -1,11 +1,11 @@
-﻿using MediatR;
+﻿using TeknoLabs.Crm.Application.Messaging;
 using TeknoLabs.Crm.Application.Services.App;
 using TeknoLabs.Crm.Domain.AppEntities.Identity;
 
 namespace TeknoLabs.Crm.Application.Features.App.RoleFeatures.GetAllRoles;
 
 
-public sealed class GetAllRolesHandler : IRequestHandler<GetAllRolesRequest, GetAllRolesResponse>
+public sealed class GetAllRolesHandler : IQueryHandler<GetAllRolesRequest, GetAllRolesResponse>
 {
     private readonly IRoleService _roleService;
 
