@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using TeknoLabs.Crm.Domain.AppEntities.Identity;
 using TeknoLabs.Crm.Presentation;
 using TeknoLabs.Crm.WebApi.Configurations;
+using TeknoLabs.Crm.WebApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseExceptionMiddleware();
 
 app.UseHttpsRedirection();
 
