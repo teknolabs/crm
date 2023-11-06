@@ -24,4 +24,7 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TeknoLabs.Crm.Application\TeknoLabs.Crm.Application.csproj" />
+  </ItemGroup>
 </Project>
