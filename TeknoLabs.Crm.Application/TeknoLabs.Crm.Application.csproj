@@ -29,7 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\App\ClientFeature\Queries\" />
-    <Folder Include="Features\Client\UCAFFeature\Queries\" />
+    <Folder Include="Features\ClientFeatures\UCAFFeature\Queries\" />
     <Folder Include="Abstractions\" />
   </ItemGroup>
   <ItemGroup>

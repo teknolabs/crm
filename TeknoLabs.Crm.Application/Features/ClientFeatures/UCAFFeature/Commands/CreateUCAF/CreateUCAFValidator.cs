@@ -1,7 +1,6 @@
 ﻿using FluentValidation;
-using TeknoLabs.Crm.Application.Features.ClientFeature.UCAFFeature.Commands.CreateUCAF;
 
-namespace TeknoLabs.Crm.Application.Features.Client.UCAFFeature.Commands.CreateUCAF;
+namespace TeknoLabs.Crm.Application.Features.ClientFeature.UCAFFeature.Commands.CreateUCAF;
 
 public sealed class CreateUCAFValidator : AbstractValidator<CreateUCAFRequest>
 {

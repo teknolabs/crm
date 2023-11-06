@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeknoLabs.Crm.WebApi", "Tek
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeknoLabs.Crm.Application", "TeknoLabs.Crm.Application\TeknoLabs.Crm.Application.csproj", "{FE2F14C6-368D-4514-87FE-5FF60B52332E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeknoLabs.Crm.UnitTest", "TeknoLabs.Crm.UnitTest\TeknoLabs.Crm.UnitTest.csproj", "{8F6560A0-0F8E-4693-9D8D-943A36171CEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{FE2F14C6-368D-4514-87FE-5FF60B52332E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE2F14C6-368D-4514-87FE-5FF60B52332E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE2F14C6-368D-4514-87FE-5FF60B52332E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F6560A0-0F8E-4693-9D8D-943A36171CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F6560A0-0F8E-4693-9D8D-943A36171CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F6560A0-0F8E-4693-9D8D-943A36171CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F6560A0-0F8E-4693-9D8D-943A36171CEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{BC73906B-DD86-451B-BB38-30C124E225A4} = {4D491138-FF86-47DC-B1C7-9D904B9D1570}
 		{98F657FA-F3BA-4CFB-A5DD-B5D2C57D2D39} = {97ACDD0B-2C5A-41DF-A13C-71B83697605F}
 		{FE2F14C6-368D-4514-87FE-5FF60B52332E} = {9E64BB85-ACDB-4316-B55B-0EA5F4FD5954}
+		{8F6560A0-0F8E-4693-9D8D-943A36171CEF} = {AD98B5B2-DF91-4004-8097-C79A4E81A67C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21B63230-E993-419D-9BBE-7201EAB7638E}
