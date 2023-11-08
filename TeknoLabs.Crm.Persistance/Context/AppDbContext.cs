@@ -16,6 +16,7 @@ namespace TeknoLabs.Crm.Persistance.Context
 
         public DbSet<Client> Clients { get; set; }
         public DbSet<ClientUsers> ClientUsers { get; set; }
+        public DbSet<MainRole> MainRole { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

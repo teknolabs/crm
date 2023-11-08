@@ -1,46 +1,31 @@
 ﻿using Moq;
-using TeknoLabs.Crm.Application.Features.CompanyFeatures.UCAFFeatures.Commands.CreateUCAF;
-using TeknoLabs.Crm.Application.Services;
-using TeknoLabs.Crm.Application.Services.CompanyServices;
-using TeknoLabs.Crm.Domain.CompanyEntities;
 using Shouldly;
+using TeknoLabs.Crm.Application.Features.ClientFeature.UCAFFeature.Commands.CreateUCAF;
+using TeknoLabs.Crm.Application.Services.ClientService;
 
 namespace TeknoLabs.Crm.UnitTest.Features.CompanyFeatures.UCAFeatures;
 
 public sealed class CreateUCAFCommandUnitTest
 {
     private readonly Mock<IUCAFService> _ucafService;
-    private readonly Mock<IApiService> _apiService;
-    private readonly Mock<ILogService> _logService;
 
     public CreateUCAFCommandUnitTest()
     {
         _ucafService = new();
-        _apiService = new();
-        _logService = new();
-    }
-
-    [Fact]
-    public async Task UCAFShouldBeNull()
-    {
-        string companyId = "585985c0-4576-4d62-ae67-59a6f72ae906";
-        string code = "100.01.001";
-        UniformChartOfAccount ucaf = await _ucafService.Object.GetByCodeAsync(companyId, code, default);
-        ucaf.ShouldBeNull();
     }
 
     [Fact]
     public async Task CreateUCAFCommandResponseShouldNotBeNull()
     {
-        var command = new CreateUCAFCommand(
+        var command = new CreateUCAFRequest(
             Code: "100.01.001",
             Name: "TL Kasa",
-            Type: "M",
-            CompanyId: "585985c0-4576-4d62-ae67-59a6f72ae906");
+            Type: 'M',
+            ClientId: "585985c0-4576-4d62-ae67-59a6f72ae906");
 
-        var handler = new CreateUCAFCommandHandler(_ucafService.Object,_logService.Object,_apiService.Object);
+        var handler = new CreateUCAFHandler(_ucafService.Object);
 
-        CreateUCAFCommandResponse response = await handler.Handle(command, default);
+        CreateUCAFResponse response = await handler.Handle(command, default);
         response.ShouldNotBeNull();
         response.Message.ShouldNotBeEmpty();
     }
