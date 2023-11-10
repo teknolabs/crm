@@ -13,5 +13,9 @@
 
   <ItemGroup>
     <None Remove="Repositories\" />
+    <None Remove="Repositories\UCAFRepositories\GenericRepositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\UCAFRepositories\GenericRepositories\" />
   </ItemGroup>
 </Project>
