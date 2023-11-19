@@ -26,11 +26,15 @@
     <None Remove="Features\App\AppUserFeatures\Login\" />
     <None Remove="Features\App\RoleFeatures\" />
     <None Remove="Features\App\RoleFeatures\CreateRole\" />
+    <None Remove="Features\App\MainRoleFeatures\" />
+    <None Remove="Features\App\MainRoleFeatures\CreateMainRole\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\App\ClientFeature\Queries\" />
     <Folder Include="Features\ClientFeatures\UCAFFeature\Queries\" />
     <Folder Include="Abstractions\" />
+    <Folder Include="Features\App\MainRoleFeatures\" />
+    <Folder Include="Features\App\MainRoleFeatures\CreateMainRole\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeknoLabs.Crm.Domain\TeknoLabs.Crm.Domain.csproj" />
